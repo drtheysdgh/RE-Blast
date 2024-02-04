@@ -15360,7 +15360,7 @@
                 return i.prototype = e.prototype, t.prototype = new i, t.OI101 = e.prototype, t
             }, hasProp = {}.hasOwnProperty, this.BattleRoyaleMode = function (e) {
                 function i(e, s, l) {
-                    this.I0I1O = e, null == s && (s = "battleroyale"), null == l && (l = "Battle Royale"), i.OI101.constructor.call(this, s, l), this.vocabulary = [], this.radar_zoom = 2, this.high_def_radar = !0, this.max_enter_time = 120, this.max_enter_players = 30, this.soundtrack = "crystals.mp3", this.respawn_delay = 1e3, this.III0I = !1, this.anonymous_ships = !1, this.radar_shows_leader = !1, this.show_weaponsbar = !0, this.restricted_weapons_store = !0, this.IlOII = BATTLE_SHIPS, this.Ill0I = BATTLE_SHIP_TYPES, this.IlOII.add(IlOII.ships_by_code[101]), this.Ill0I.add(Ill0I.types_by_code[101]), this.IIl0I = 36e3, this.O0Ol0 = 1.3, this.IOl10 = .003, this.RADIATION_START = 7200, this.custom_game_allowed = !0, this.Ol0Il = !1, this.tips_test = "Collect weapons and refills", this.tips = [t("Collect weapons and refills"), t("Kill other players"), t("Be the last player standing")], this.spawned = !1
+                    this.I0I1O = e, null == s && (s = "battleroyale"), null == l && (l = "Battle Royale"), i.OI101.constructor.call(this, s, l), this.vocabulary = [], this.radar_zoom = 1, this.high_def_radar = !0, this.max_enter_time = 120, this.max_enter_players = 30, this.soundtrack = "crystals.mp3", this.respawn_delay = 1e3, this.III0I = !1, this.anonymous_ships = !1, this.radar_shows_leader = !1, this.show_weaponsbar = !0, this.restricted_weapons_store = !0, this.IlOII = BATTLE_SHIPS, this.Ill0I = BATTLE_SHIP_TYPES, this.IlOII.add(IlOII.ships_by_code[101]), this.Ill0I.add(Ill0I.types_by_code[101]), this.IIl0I = 36e3, this.O0Ol0 = 1.3, this.IOl10 = .003, this.RADIATION_START = 7200, this.custom_game_allowed = !0, this.Ol0Il = !1, this.tips_test = "Collect weapons and refills", this.tips = [t("Collect weapons and refills"), t("Kill other players"), t("Be the last player standing")], this.spawned = !1
                 }
                 return extend(i, e), i.prototype.IlI0I = function (t) {
                     return this.game_info = t, this.I0I1O.startGame(t), this.I0I1O.display.screen.llO1l.hide(), this.I0I1O.O1Ill.OllIO.IOIlO.x = 0, this.I0I1O.O1Ill.OllIO.IOIlO.y = -40, this.next_round_page = new BattleRoyalePage(this.I0I1O, this), this.next_round_page.visible = !1, this.I0I1O.display.screen.llO1l.add(this.next_round_page, [0, 0, 1, 1]), this.I0I1O.lI1OO.enter()
@@ -16602,6 +16602,11 @@
             }, hasProp = {}.hasOwnProperty, this.ModdingMode = function (t) {
                 function e(t) {
                     this.I0I1O = t, e.OI101.constructor.call(this, "modding", "Modding"), this.vocabulary = [], this.radar_shows_leader = !1
+                    Object.assign(this.vocabulary, {
+                        text: "",
+                        icon: "\u00a0",
+                        key: "E"
+                    });
                 }
                 return extend(e, t), e.prototype.setOptions = function (t) {
                     if (e.OI101.setOptions.call(this, t), t.radar_zoom && (this.radar_zoom = t.radar_zoom), null != t.weapons_store && (this.restricted_weapons_store = !t.weapons_store), null != t.vocabulary) return this.vocabulary = t.vocabulary
