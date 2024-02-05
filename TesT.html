@@ -52764,6 +52764,29 @@
                                         s.addColorStop(0.5, "hsl(200,100%,20%)"),
                                         s.addColorStop(1, "hsl(200,100%,30%)");
                                     break;
+                                case "Frozen":
+                                for (
+                                        s = t.createLinearGradient(0, 0, 0, i),
+                                        h = Math.min(10, this.size / 10),
+                                        n = a = 0,
+                                        u = h - 1;
+                                        a <= u;
+                                        n = a += 1
+                                    )
+                                        s.addColorStop(n / h, "hsl(200,100%,60%)"),
+                                            s.addColorStop((n + 1) / h, "#fff");
+                                    for (
+                                        l = t.createLinearGradient(0, 0, 0, i),
+                                        l.addColorStop(0, "hsl(200,100%,60%)"),
+                                        l.addColorStop(0.1, "#fff"),
+                                        n = o = 0,
+                                        d = h - 1;
+                                        o <= d;
+                                        n = o += 1
+                                    )
+                                        l.addColorStop((n + 0.5) / h, "hsl(200,100%,60%)"),
+                                            l.addColorStop(Math.min(1, (n + 1.5) / h), "#fff");
+                                    break;
                                 case "carbon":
                                     for (
                                         s = t.createLinearGradient(0, 0, 0, i),
