@@ -52605,7 +52605,7 @@
                             (this.icon = this.custom.badge || "pirate"),
                             (this.laser = this.custom.laser || "simple"),
                             (this.finish = this.custom.finish || "gold"),
-                            (this.hue = this.custom.hue || 0),
+                            (this.hue = this.custom.hue || 180),
                             this.II001();
                     }
                     return (
@@ -52765,27 +52765,27 @@
                                         s.addColorStop(1, "hsl(200,100%,30%)");
                                     break;
                                 case "Frozen":
-                                for (
-                                        s = t.createLinearGradient(0, 0, 0, i),
-                                        h = Math.min(10, this.size / 10),
-                                        n = a = 0,
-                                        u = h - 1;
-                                        a <= u;
-                                        n = a += 1
-                                    )
-                                        s.addColorStop(n / h, "hsl(350,100%,60%)"),
-                                            s.addColorStop((n + 1) / h, "#888");
                                     for (
-                                        l = t.createLinearGradient(0, 0, 0, i),
-                                        l.addColorStop(0, "#333"),
-                                        l.addColorStop(0.1, "#888"),
-                                        n = o = 0,
-                                        d = h - 1;
-                                        o <= d;
-                                        n = o += 1
-                                    )
-                                        l.addColorStop((n + 0.5) / h, "hsl(350,100%,60%)"),
-                                            l.addColorStop(Math.min(1, (n + 1.5) / h), "#888");
+                                        s = t.createLinearGradient(0, 0, 0, i),
+                                            h = Math.min(10, this.size / 10),
+                                            n = a = 0,
+                                            u = h - 1;
+                                            a <= u;
+                                            n = a += 1
+                                        )
+                                            s.addColorStop(n / h, "hsl(200,100%,70%)"),
+                                                s.addColorStop((n + 1) / h, "hsl(200,100%,70%)");
+                                        for (
+                                            l = t.createLinearGradient(0, 0, 0, i),
+                                            l.addColorStop(0, "hsl(200,100%,70%)"),
+                                            l.addColorStop(0.1, "hsl(200,100%,70%)"),
+                                            n = o = 0,
+                                            d = h - 1;
+                                            o <= d;
+                                            n = o += 1
+                                        )
+                                            l.addColorStop((n + 0.5) / h, "hsl(200,100%,70%)"),
+                                                l.addColorStop(Math.min(1, (n + 1.5) / h), "hsl(200,100%,70%)");
                                     break;
                                 case "carbon":
                                     for (
@@ -52815,11 +52815,9 @@
                                         s.addColorStop(0, "#EEE"),
                                         s.addColorStop(1, "#666");
                             }
-                            if (
-                                ((t.globalCompositeOperation = "source-atop"),
+                            if (((t.globalCompositeOperation = "source-atop"),
                                     (t.fillStyle = s),
-                                    "carbon" === this.finish)
-                            ) {
+                                    "carbon" === this.finish)) {
                                 for (n = r = 0, I = 4 * h - 1; r <= I; n = r += 1)
                                     (t.fillStyle = n % 2 == 0 ? s : l),
                                         t.fillRect((n * e) / (4 * h), 0, e / (4 * h), i);
@@ -52827,6 +52825,18 @@
                                     s.addColorStop(0.3, "rgba(0,0,0,.5)"),
                                     s.addColorStop(0.5, "rgba(0,0,0,0)"),
                                     s.addColorStop(0.7, "rgba(0,0,0,.5)"),
+                                    (t.fillStyle = s),
+                                    t.fillRect(0, 0, e, i);
+                            } else if(((t.globalCompositeOperation = "source-atop"),
+                                    (t.fillStyle = s),
+                                    "Frozen" === this.finish)) {
+                                        for (n = r = 0, I = 4 * h - 1; r <= I; n = r += 1)
+                                    (t.fillStyle = n % 2 == 0 ? s : l),
+                                        t.fillRect((n * e) / (4 * h), 0, e / (4 * h), i);
+                                (s = t.createLinearGradient(0, 0, 0, i)),
+                                    s.addColorStop(0.1, "hsla(0,100%,100%,1)"),
+                                    s.addColorStop(0.6, "hsl(200,100%,60%)"),
+                                    s.addColorStop(0.1, "hsla(0,100%,100%,1)"),
                                     (t.fillStyle = s),
                                     t.fillRect(0, 0, e, i);
                             } else (t.fillStyle = s), t.fillRect(0, 0, e, i);
@@ -52847,10 +52857,10 @@
                                     c = p[l],
                                     t.beginPath(),
                                     s = t.createRadialGradient(0, 0, 0, 0, 0, i / 6),
-                                    s.addColorStop(0, "hsl(50,100%,100%)"),
-                                    s.addColorStop(1, "hsl(50,80%,40%)"),
+                                    s.addColorStop(0, "hsl(180,100%,70%)"),
+                                    s.addColorStop(1, "hsl(180,80%,50%)"),
                                     t.fillStyle = s,
-                                    t.strokeStyle = "rgba(0,0,0,.8)",
+                                    t.strokeStyle = "hsla(180,100%,10%,0.9)",
                                     t.lineWidth = i / 24,
                                     n = 0,
                                     o = c.length;
@@ -52874,10 +52884,10 @@
                                     c = p[u],
                                     t.beginPath(),
                                     s = t.createRadialGradient(0, 0, 0, 0, 0, i / 6),
-                                    s.addColorStop(0, "hsl(50,100%,100%)"),
-                                    s.addColorStop(1, "hsl(50,80%,40%)"),
+                                    s.addColorStop(0, "hsl(180,100%,70%)"),
+                                    s.addColorStop(1, "hsl(180,80%,50%)"),
                                     t.fillStyle = s,
-                                    t.strokeStyle = "rgba(0,0,0,.8)",
+                                    t.strokeStyle = "hsla(180,100%,10%,0.9)",
                                     t.lineWidth = i / 24,
                                     d = 0,
                                     h = c.length;
@@ -53160,6 +53170,7 @@
                             return (
                                 (i = [
                                     "Modraxis",
+                                    "Frozen",
                                     "srv",
                                     "star",
                                     "paw",
@@ -53168,7 +53179,7 @@
                                     "invader",
                                     "youtube",
                                 ][Math.floor(6 * Math.random())]),
-                                (s = ["Modraxis", "zinc", "gold", "alloy", "carbon", "srvM", "titanium"][
+                                (s = ["Modraxis","Frozen", "zinc", "gold", "alloy", "carbon", "srvM", "titanium"][
                                     Math.floor(5 * Math.random())
                                 ]),
                                 (l = ["0", "1", "2", "3"][Math.floor(4 * Math.random())]),
@@ -53178,7 +53189,7 @@
                         (t.test = function () {
                             var e, i, s, l, n, a, o, r, h, u, d, I;
                             for (
-                                u = ["Modraxis", "zinc", "gold", "alloy", "srvM", "carbon", "titanium"],
+                                u = ["Modraxis","Frozen", "zinc", "gold", "alloy", "srvM", "carbon", "titanium"],
                                 s = 0,
                                 a = u.length;
                                 s < a;
@@ -53231,7 +53242,7 @@
                                 (this.verified = localStorage.getItem("ECPVerified")),
                                 (this.custom = {
                                     badge: localStorage.getItem("badge") || "Modraxis",
-                                    finish: localStorage.getItem("finish") || "Modraxis",
+                                    finish: localStorage.getItem("finish") || "Frozen",
                                     laser: localStorage.getItem("laser") || "3",
                                 }),
                                 "halloween" === this.custom.badge &&
@@ -53412,6 +53423,7 @@
                                 medic: "Medic",
                                 srv: "SRV 2.0",
                                 Modraxis: "Modraxis",
+                                Frozen:"Frozen",
                                 blank: "Blank",
                                 seasonal: "Seasonal",
                             },
@@ -53423,6 +53435,7 @@
                                 srvM: "Radiant Ruby",
                                 carbon: "Carbon",
                                 Modraxis: "Modraxis",
+                                Frozen:"Frozen",
                             },
                             laser: {
                                 0: "Single",
