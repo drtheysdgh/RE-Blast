@@ -26829,6 +26829,9 @@
                                 case "Modraxis":
                                     this.buildModraxisMaterial();
                                     break;
+                                case "Frozen":
+                                    this.buildFrozenMaterial();
+                                    break;
                                 default:
                                     this.buildDefaultMaterial();
                             }
@@ -26891,6 +26894,19 @@
                                 bumpScale: 0.1,
                                 color: "hsl(200, 100%, 15%)",
                                 emissive: "hsl(200, 100%, 40%)",
+                                emissiveMap: OOlI1,
+                            }));
+                        }),
+                        (t.prototype.buildFrozenMaterial = function (t) {
+                            return (this.material = new THREE.MeshPhongMaterial({
+                                map: I0O01,
+                                bumpMap: I0O01,
+                                specularMap: I0O01,
+                                specular: "hsl(200, 100%, 50%)",
+                                shininess: 80,
+                                bumpScale: 0.1,
+                                color: "hsl(200, 100%, 50%)",
+                                emissive: "hsl(200, 100%, 60%)",
                                 emissiveMap: OOlI1,
                             }));
                         }),
@@ -32519,11 +32535,8 @@
                                 case "Modraxis":
                                     this.buildModraxisMaterial();
                                     break;
-                                case "copper":
-                                    this.buildCopperMaterial();
-                                    break;
-                                case "diamond":
-                                    this.buildDiamondMaterial();
+                                case "Frozen":
+                                    this.buildFrozenMaterial();
                                     break;
                                 default:
                                     this.buildDefaultMaterial();
@@ -32587,6 +32600,19 @@
                                 bumpScale: 0.1,
                                 color: "hsl(200, 100%, 15%)",
                                 emissive: "hsl(200, 100%, 40%)",
+                                emissiveMap: OOlI1,
+                            }));
+                        }),
+                        (t.prototype.buildFrozenMaterial = function (t) {
+                            return (this.material = new THREE.MeshPhongMaterial({
+                                map: I0O01,
+                                bumpMap: I0O01,
+                                specularMap: I0O01,
+                                specular: "hsl(200, 100%, 50%)",
+                                shininess: 80,
+                                bumpScale: 0.1,
+                                color: "hsl(200, 100%, 50%)",
+                                emissive: "hsl(200, 100%, 60%)",
                                 emissiveMap: OOlI1,
                             }));
                         }),
