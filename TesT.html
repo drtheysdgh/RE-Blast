@@ -5736,6 +5736,7 @@
                             this.O1Ill.add(this.I0II1),
                             (this.object = this.O1Ill),
                             (this.I1lOI = !1),
+                            (this.SETTINGS2 = !1),
                             (this.mousepressed = !1),
                             (this.I1l11 = 1);
                     }
@@ -13686,12 +13687,12 @@
                                                 t("Copy Room Link").toUpperCase(),
                                                 "roomlink"
                                             )),
-                                            // (this.settings = new MenuButton(
-                                            //     this.I0I1O,
-                                            //     this,
-                                            //     t("SETTINGS"),
-                                            //     "settings"
-                                            // )),
+                                (this.SETTINGS2 = new MenuButton(
+                                    this.I0I1O,
+                                    this,
+                                    t("SETTINGS"),
+                                    "SETTINGS2"
+                                )),
                                             (this.quit = new MenuButton(
                                                 this.I0I1O,
                                                 this,
@@ -13701,7 +13702,7 @@
                                             this.addButton(this.resume),
                                             this.addButton(this.I1lOI),
                                             this.addButton(this.roomlink),
-                                            // this.addButton(this.settings),
+                                            this.addButton(this.SETTINGS2),
                                             this.addButton(this.quit)),
                                 (this.selected_index = 0),
                                 this.updateSelection()
@@ -13867,6 +13868,14 @@
                                     return (
                                         this.I0I1O.II10I.toggleFullScreen(),
                                         this.I0I1O.display.screen.llO1l.toggleOptions()
+                                    );
+                                case "SETTINGS2":
+                                    return (
+                                        (function (t) {
+                                            return function (e) {
+                                                return e.stopPropagation(), t.showSettings();
+                                            };
+                                        })(this)
                                     );
                             }
                         }),
