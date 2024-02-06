@@ -3530,6 +3530,9 @@
         gtag("config", "UA-49553618-3");
     </script>
     <div id="canvaswrapper"></div>
+    <div>
+        <i class="sbg sbg-gears"></i>
+    </div>
     <div id="overlay">
         <div id="preroll"></div>
         <div id="cgpreroll" style="
@@ -13686,12 +13689,6 @@
                                                 t("Copy Room Link").toUpperCase(),
                                                 "roomlink"
                                             )),
-                                (this.settings2 = new MenuButton(
-                                    this.I0I1O,
-                                    this,
-                                    t("SETTINGS"),
-                                    "settings2"
-                                )),
                                             (this.quit = new MenuButton(
                                                 this.I0I1O,
                                                 this,
@@ -13701,7 +13698,6 @@
                                             this.addButton(this.resume),
                                             this.addButton(this.I1lOI),
                                             this.addButton(this.roomlink),
-                                            this.addButton(this.settings2),
                                             this.addButton(this.quit)),
                                 (this.selected_index = 0),
                                 this.updateSelection()
@@ -13852,16 +13848,6 @@
                                         )
                                     );
                                 case "settings":
-                                    return (
-                                        this.I0I1O.II10I.showSettings(),
-                                        (this.settings_shown = !0),
-                                        (this.I0I1O.II10I.modal_close_callback = (function (t) {
-                                            return function () {
-                                                return (t.settings_shown = !1);
-                                            };
-                                        })(this))
-                                    );
-                                case "settings2":
                                     return (
                                         this.I0I1O.II10I.showSettings(),
                                         (this.settings_shown = !0),
