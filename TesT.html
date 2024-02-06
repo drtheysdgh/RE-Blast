@@ -13686,9 +13686,23 @@
                                                 t("Copy Room Link").toUpperCase(),
                                                 "roomlink"
                                             )),
+                                            (this.settings = new MenuButton(
+                                                this.I0I1O,
+                                                this,
+                                                t("SETTINGS"),
+                                                "settings"
+                                            )),
+                                            (this.quit = new MenuButton(
+                                                this.I0I1O,
+                                                this,
+                                                t("QUIT"),
+                                                "quit"
+                                            )),
                                             this.addButton(this.resume),
                                             this.addButton(this.I1lOI),
                                             this.addButton(this.roomlink)),
+                                            this.addButton(this.settings),
+                                            this.addButton(this.quit))
                                 (this.selected_index = 0),
                                 this.updateSelection()
                             );
