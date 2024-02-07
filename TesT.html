@@ -31114,7 +31114,7 @@
                                 (a = new StationModuleModel(
                                     n.generate(l.id + this.hue),
                                     this.hue / 360,
-                                    "gold",
+                                    "alloy",
                                     this
                                 )),
                                 (a.id = l.id),
@@ -31483,7 +31483,7 @@
                                 return (
                                     (this.station.last_station_message = Date.now()),
                                     this.alive
-                                        ? i.message(t("Station module repaired"), "#8FF")
+                                        ? i.message(t("Station module repaired"), "#FF0000")
                                         : i.message(t("Station module destroyed"), "#F88")
                                 );
                         }),
@@ -31534,7 +31534,7 @@
                                 )
                                     return (
                                         (this.station.last_station_message = Date.now()),
-                                        i.message(t("Station is under attack"), "#F88")
+                                        i.message(t("Station is under attack"), "#FF0000")
                                     );
                             }
                         }),
@@ -37784,9 +37784,9 @@
                                     ((e.font = 1.5 * K + "pt FontAwesome"),
                                         (e.textAlign = "center"),
                                         (e.textBaseline = "middle"),
-                                        (e.fillStyle = "#F88"),
+                                        (e.fillStyle = "#FF0000"),
                                         (e.shadowBlur = 8),
-                                        (e.shadowColor = "#F00"),
+                                        (e.shadowColor = "#FF0000"),
                                         (e.shadowOpacity = 1),
                                         e.fillText("", 0.1 * this.IOllI, 0.3 * this.IOllI)),
                                     this.warning_count--),
