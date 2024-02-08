@@ -36061,12 +36061,11 @@
                 }),
                 (hasProp = {}.hasOwnProperty),
                 (this.SurvivalMode = (function (e) {
-                    let radZoo = (this.I0I1O.settings.check("radZo") ? 1 : 4);
                     function i(e) {
                         (this.I0I1O = e),
                             i.OI101.constructor.call(this, "survival", "Survival Mode"),
                             (this.max_enter_time = 1800),
-                            (this.radar_zoom = radZoo),
+                            (this.radar_zoom = (this.I0I1O.settings.check("radZo") ? 1 : 4)),
                             (this.max_enter_players = 50),
                             (this.vocabulary = [
                                 {
